@@ -2,10 +2,10 @@
 #define BASIC_CALC_H
 
 extern "C"{
-    float sum(float a, float b);
-    float subtration(float a, float b);
-    float product(float a, float b);
-    float division(float a, float b);
+    float sum(float* numbers_array, int size);
+    float subtration(float* numbers_array, int size);
+    float product(float* numbers_array, int size);
+    float division(float* numbers_array, int size);
 }
 
 #endif
