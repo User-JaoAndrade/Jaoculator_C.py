@@ -10,6 +10,9 @@
     - Subtração
     - Multiplicação
     - Divisão
+    - Adição de Matrizes
+    - Subtração de Matrizes
+    - Multiplicação de Matriz por um único multiplicador
 
 ## Requisitos
 - Python 3.12.10 ou superior
@@ -22,11 +25,13 @@
 1. No Linux
 ```bash
 g++ -fPIC -shared -o libcalc.so basic_calc.cpp
+g++ -fPIC -shared -o libmatriz.so matriz_calc.cpp
 ```
 
 2. No Windows (via MSYS2 UCRT64)
 ```bash
-g++ -shared -o libcalc.dll basic_calc.cpp
+g++ -shared -o libcalc.dll -fPIC basic_calc.cpp
+g++ -shared -o libmatriz.dll -fPIC matriz_calc.cpp
 ```
 
 3. Executar o programa
@@ -43,9 +48,13 @@ python main.py
 
 ![SOMA](assets/menu_soma.png)
 
+- **MATRIZ**
+
+![MATRIZ](assets/menu_matriz.png)
+
 # IDEIAS FUTURAS
 - Interface Gráfica
 - Calculos de Logaritmos, Raízes, Potências
-- Calculo com Matrizes (Calculos basicos, inversa, determinantes, etc)
+- Calculo com Matrizes (inversa, determinantes, etc)
 - Interpretação de expressões matemáticas livres
     - Exemplo: 2 x 3 - (1 + 2)
